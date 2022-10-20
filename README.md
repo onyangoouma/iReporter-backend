@@ -8,7 +8,7 @@ This README would document an  explaination of how to setup the codebase upon cl
 
 * create a branch to work on for your part of code e,g git branch Nicholas
 
-* Commit and push regulary to your #working branch while working on your branch.
+* Commit and push regulary to your **working branch **while working on your branch.
 
 * Scrum master at the end pull,compare and merge request to add all work in main branch
 
