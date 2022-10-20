@@ -1,24 +1,18 @@
-# README
+# Serilalizers
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* clone main branch using git clone git@github.com:onyangoouma/iReporter-backend.git
 
-* System dependencies
+* install System dependencies by running bundle install
 
-* Configuration
+*create a branch to work on for your part of code i.e git branch Nicholas
 
-* Database creation
+* Commit and push regulary to your working branch while working on your branch.
 
-* Database initialization
+* Scrum master at the end pull,compare and merge request to add all work in main branch
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
