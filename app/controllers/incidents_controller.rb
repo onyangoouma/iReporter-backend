@@ -1,7 +1,9 @@
 class IncidentsController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
-
+    #skip_before_action :authorize, only: :index
+    
     def index
         incidents = Incident.all
         render json: incidents, status: :ok
@@ -12,14 +14,10 @@ class IncidentsController < ApplicationController
         render json: incident, status: :created
     end
 
-    def show 
-        incident = Incident.find_by(id: params[:id]) 
-        if incident 
-         render json: incident
-        else
-         render json: {error: 'Incident not found'}, status: :not_found
-        end
-     end
+    def show
+        incident = find_incident
+        render json: incident
+      end
 
     def update
         incident = find_incident
@@ -43,7 +41,11 @@ class IncidentsController < ApplicationController
         params.permit(:incident_type, :title, :description, :location, :date , :image_url, :status)
     end
 
-    def render_unprocessable_entity_response(exception)
-        render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
+    def render_not_found_response
+        render json: { error: "Incident not found" }, status: :not_found
     end
+
+    # def render_unprocessable_entity_response(exception)
+    #     render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
+    # end
 end
