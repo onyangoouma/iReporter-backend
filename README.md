@@ -1,9 +1,6 @@
 # Serilalizers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This README would document an  explaination of how to setup the codebase upon cloning/forking:
 
 * clone main branch using git clone git@github.com:onyangoouma/iReporter-backend.git
 
