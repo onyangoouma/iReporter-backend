@@ -11,8 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_10_20_114914) do
-  create_table "cases", force: :cascade do |t|
-    t.string "case_type"
+  create_table "incidents", force: :cascade do |t|
+    t.string "incident_type"
     t.string "title"
     t.string "description"
     t.string "location"
