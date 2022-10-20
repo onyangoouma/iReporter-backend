@@ -9,7 +9,7 @@ Things you may want to cover:
 
 * install System dependencies by running bundle install
 
-*create a branch to work on for your part of code i.e git branch Nicholas
+* create a branch to work on for your part of code i.e git branch Nicholas
 
 * Commit and push regulary to your working branch while working on your branch.
 
