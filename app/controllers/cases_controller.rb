@@ -12,6 +12,15 @@ class CasesController < ApplicationController
         render json: case, status: :created
     end
 
+    def show 
+        case = Case.find_by(id: params[:id]) 
+        if case 
+         render json: case
+        else
+         render json: {error: 'Case not found'}, status: :not_found
+        end
+     end
+
     def destroy
         case = find_case
         case.destroy
