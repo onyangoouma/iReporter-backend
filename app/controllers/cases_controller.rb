@@ -12,7 +12,17 @@ class CasesController < ApplicationController
         render json: case, status: :created
     end
 
+    def destroy
+        case = find_case
+        case.destroy
+        head :no_content
+    end
+
     private
+
+    def find_case
+        Case.find(params[:id])
+    end
 
     def case_params
         params.permit(:case_type, :title, :description, :location, :date , :image_url, :status)
