@@ -21,6 +21,12 @@ class CasesController < ApplicationController
         end
      end
 
+    def update
+        case= find_case
+        case.update(case_params)
+        render json: case
+    end
+
     def destroy
         case = find_case
         case.destroy
