@@ -17,22 +17,20 @@ class UsersController < ApplicationController
         render json:user
     end
 
-    def create 
-        user = User.create!(user_params)
-        render json:user, status: :created
-    end
-    
-
     # def create 
-    #     user = User.create!(user_params) 
-    #     if user.valid?
-    #         session[:user_id] = user.id 
-    #         render json:user 
-    #     else
-    #         render json: { errors: user.errors.full_messages },status: :unprocessable_entity
-
-    #     end
+    #     user = User.create!(user_params)
+    #     render json:user, status: :created
     # end
+    
+    def create 
+        user = User.find_by(username: params[:username]) 
+        if user&.authenticate(params[:password]) 
+            session[:user_id] = user.id 
+            render json: user,status: :created 
+        else
+            render json: { error:{ login:"Invalid email or password"} }, status: :unauthorized 
+        end
+    end 
 
 
     private
