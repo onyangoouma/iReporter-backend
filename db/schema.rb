@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_070332) do
     t.datetime "updated_at", null: false
   end
 
+ActiveRecord::Schema[7.0].define(version: 2022_10_20_092612) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"

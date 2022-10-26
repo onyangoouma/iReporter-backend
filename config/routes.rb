@@ -11,4 +11,9 @@ post "/login", to: "sessions#create"
 delete "/logout", to: "sessions#destroy"
 
 resources :users
+=======
+  resources :users
+  get '/auth', to: 'users#show'
+  post '/signup', to: 'users#create'
+ 
 end
