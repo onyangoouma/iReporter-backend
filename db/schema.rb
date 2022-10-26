@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema[7.0].define(version: 2022_10_26_070332) do
+  create_table "incidents", force: :cascade do |t|
+    t.string "incident_type"
+    t.string "title"
+    t.string "description"
+    t.string "location"
+    t.string "date"
+    t.string "image_url"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 ActiveRecord::Schema[7.0].define(version: 2022_10_20_092612) do
   create_table "users", force: :cascade do |t|
     t.string "name"
