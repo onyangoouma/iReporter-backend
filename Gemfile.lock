@@ -109,6 +109,11 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jsonapi-renderer (0.2.2)
+    jwt (1.5.6)
+    knock (2.1.1)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -222,6 +227,7 @@ DEPENDENCIES
   debug
   faker (~> 2.18)
   jbuilder
+  knock
   puma (~> 5.0)
   rails (~> 7.0.4)
   selenium-webdriver
