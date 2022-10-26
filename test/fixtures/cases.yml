@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  case_type: MyString
+  title: MyString
+  description: MyString
+  location: MyString
+  date: MyString
+  image_url: MyString
+  status: MyString
+
+two:
+  case_type: MyString
+  title: MyString
+  description: MyString
+  location: MyString
+  date: MyString
+  image_url: MyString
+  status: MyString
