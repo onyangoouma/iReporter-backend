@@ -39,4 +39,8 @@ Incident.create(
 )
 
 
+User.create( name: 'Silvia Mutete', username: 'SilviaMutete', email: 'silviamutete@gmail.com',password_digest: 'silviamutete')
+User.create( name: 'Monicah Ndunge', username: 'MonicahNdunge', email: 'monicahndunge@gmail.com',password_digest: 'monicahndunge')
+User.create( name: 'Martha Mbatha', username: 'MarthaMbatha', email: 'marthambatha@gmail.com',password_digest: 'marthambatha')
+
 puts "🌱 Done spices..."
