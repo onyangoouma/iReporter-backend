@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   post 'user_token' => 'user_token#create'
-=======
+
   resources :admins
->>>>>>> 5c3c6bf16b296dd213d1174aa996a9755aefeee9
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :incidents, only: [:index, :create, :show, :update, :delete]
